@@ -5,35 +5,24 @@ main{
 }
 
 body{
-    background-color: black;
+    background-color: rgb(34, 33, 33);
 }
 
-/*.container {
-    display: grid;
-    text-align: center;
-    position: relative;
-    grid-row-start: 1;
-  }
-  .typing-loop {
-    font-family: monospace;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 10px solid;
-    width: 0;
-    animation: typing-loop 15s steps(30, end) normal, blink-caret 0.75s step-end infinite;
-    animation-duration: 4s;
+a{
+  color: rgb(24, 238, 113);
+  text-align: center;
 }
 
-@keyframes typing-loop {
-    0%, 100% { width: 0; }
-    50% { width: 100%; }
+h1,h2,main{
+  color: whitesmoke;
 }
 
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: black; }
+img{
+  width: 25px;
+  height: 25px;
+  margin-bottom: 0.50%;
+  margin-right: 0.50%;
 }
-*/
 
 .container {
     display: flex;
@@ -43,6 +32,7 @@ body{
 
   .typing-loop {
     font-family: monospace;
+    color: whitesmoke;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -58,5 +48,39 @@ body{
     0%, 100% { border-color: transparent; }
     50% { border-color: black; }
   }
+
+  .classFooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(236, 229, 229);
+    color: black;
+    text-align: center;
+  }
+
+  .flex-container > div{
+    background-color: black;
+    color: whitesmoke;
+    width: 30%;
+    margin: 10px;
+  }
+
+  .projTit{
+    justify-content: Center;
+    text-decoration: whitesmoke;
+    text-align: center;
+    font-family: monospace;
+  }
+
+  .projdescricao{
+    text-align: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    font-family: monospace;
+  }
+
 
   

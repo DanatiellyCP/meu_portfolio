@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="js/functions.js"></script>
+
+    <title>OS Encomendas</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>OS 804</h2>
+
+        <form>
+          <div class="form-group">
+            <label for="empresa">Empresa:</label>
+            <input type="text" class="form-control" id="empresa" placeholder="Entre com a empresa" name="empresa">
+          </div>
+
+          <div class="form-group">
+            <label for="cliente">Cliente:</label>
+            <input type="text" class="form-control" id="cliente" placeholder="Entre com cliente" name="cliente">
+          </div>
+          <div class="form-group">
+            <label for="produto">Produto:</label>
+            <input type="text" class="form-control" id="produto" placeholder="Entre com produto" name="produto">
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" class="form-control" id="descricao" placeholder="Entre com descrição" name="descricao">
+          </div>
+          <div class="form-group">
+            <label for="qtd">Quantidade:</label>
+            <input type="number" class="form-control" id="qtd" placeholder="Entre quantidade" name="qtd">
+          </div>
+          <div class="form-group">
+            <label for="valorU">Valor Unitário:</label>
+            <input type="number" step="0.01" class="form-control" id="valorU" placeholder="Entre valor unitário" name="valorU">
+          </div>
+          <div class="form-group">
+            <label for="valorT">Valor Total:</label>
+            <input type="text" class="form-control" id="valorT" placeholder="Valor total" name="valorT" readonly>
+          </div>
+          <div class="form-group">
+            <label for="dtenc">Dt. Encomenda:</label>
+            <input type="date" class="form-control" id="dtenc" name="dtenc">
+          </div>
+          <div class="form-group">
+            <label for="dtEntrega">Dt. Entrega:</label>
+            <input type="date" class="form-control" id="dtEntrega" name="dtEntrega">
+          </div>
+
+          <button type="button" onclick="enviarDados()">Enviar</button>
+         
+        </form>
+      </div>  
+</body>
+</html>

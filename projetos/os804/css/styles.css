@@ -1,0 +1,11 @@
+#os {
+   margin-left: 0.50%;
+   margin-right: 0.50%;
+}
+
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #5b42f3, #00d4ff);
+    position: relative;
+}

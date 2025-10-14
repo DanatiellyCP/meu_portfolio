@@ -53,3 +53,41 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error('Erro ao carregar repositórios:', err));
 });
+
+
+// Array com seus projetos online
+const projetosOnline = [
+    {
+        name: "OS 804",
+        description: "Projeto para impressão de comprovante de ordens de serviços",
+        url: "projetos/os804/index804.html"
+    },
+    {
+        name: "Projeto 2",
+        description: "Descrição do Projeto 2",
+        url: "https://link-do-projeto2.com"
+    },
+    {
+        name: "Projeto 3",
+        description: "Descrição do Projeto 3",
+        url: "https://link-do-projeto3.com"
+    }
+];
+
+// Seleciona o container da nova seção
+const containerOnline = document.getElementById('online-projects');
+
+projetosOnline.forEach(proj => {
+    const col = document.createElement('div');
+    col.className = 'col-md-4 mb-4';
+    col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">${proj.name}</h5>
+                <p class="card-text">${proj.description || 'Sem descrição disponível.'}</p>
+                <a href="${proj.url}" target="_blank" class="btn btn-primary">Testar Online</a>
+            </div>
+        </div>
+    `;
+    containerOnline.appendChild(col);
+});

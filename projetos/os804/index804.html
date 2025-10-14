@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS 804 - Criar Ordem de Serviço</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/functions.js"></script>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-row {
+            margin-bottom: 10px;
+        }
+        .remove-btn {
+            margin-top: 32px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ordem de Serviço</h1>
+
+    <div class="mb-3">
+        <label for="empresa" class="form-label">Empresa:</label>
+        <input type="text" class="form-control" id="empresa" placeholder="Nome da empresa">
+
+        <label for="rodape">Rodapé:</label>
+        <input type="text" class="form-control" id="rodape" placeholder="Digite o rodapé da OS">
+
+    </div>
+
+    <div class="mb-3">
+        <label for="cliente" class="form-label">Cliente:</label>
+        <input type="text" class="form-control" id="cliente" placeholder="Nome do cliente">
+    </div>
+
+    <div id="productsContainer">
+        <div class="row product-row">
+            <div class="col-md-3">
+                <label>Produto</label>
+                <input type="text" class="form-control produto" placeholder="Produto">
+            </div>
+            <div class="col-md-3">
+                <label>Descrição</label>
+                <input type="text" class="form-control descricao" placeholder="Descrição">
+            </div>
+            <div class="col-md-2">
+                <label>Qtd</label>
+                <input type="number" class="form-control qtd" placeholder="0" min="0">
+            </div>
+            <div class="col-md-2">
+                <label>Valor Unitário</label>
+                <input type="number" class="form-control valorU" placeholder="0.00" min="0" step="0.01">
+            </div>
+            <div class="col-md-2">
+                <label>Valor Total</label>
+                <input type="text" class="form-control valorT" placeholder="0.00" readonly>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-secondary mb-3" id="addProductBtn">Adicionar Produto</button>
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="dtenc">Dt. Encomenda:</label>
+            <input type="date" class="form-control" id="dtenc">
+        </div>
+        <div class="col-md-6">
+            <label for="dtEntrega">Dt. Entrega:</label>
+            <input type="date" class="form-control" id="dtEntrega">
+        </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="enviarDadosMulti()">Gerar OS</button>
+</div>
+
+<script>
+    // Adiciona nova linha de produto
+    $('#addProductBtn').click(function() {
+        const row = `
+        <div class="row product-row">
+            <div class="col-md-3">
+                <input type="text" class="form-control produto" placeholder="Produto">
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="form-control descricao" placeholder="Descrição">
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control qtd" placeholder="0" min="0">
+            </div>
+            <div class="col-md-2">
+                <input type="number" class="form-control valorU" placeholder="0.00" min="0" step="0.01">
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control valorT" placeholder="0.00" readonly>
+            </div>
+        </div>`;
+        $('#productsContainer').append(row);
+    });
+
+    // Calcula valor total sempre que muda qtd ou valorU
+    $(document).on('input', '.qtd, .valorU', function() {
+        $(this).closest('.product-row').find('.valorT').val(function() {
+            const qtd = parseFloat($(this).closest('.product-row').find('.qtd').val()) || 0;
+            const valorU = parseFloat($(this).closest('.product-row').find('.valorU').val()) || 0;
+            return (qtd * valorU).toFixed(2);
+        });
+    });
+
+    // Função para enviar os dados múltiplos produtos
+    function enviarDadosMulti() {
+        const Empresa = $('#empresa').val();
+        const Cliente = $('#cliente').val();
+        const DtEncomenda = $('#dtenc').val();
+        const DtEntrega = $('#dtEntrega').val();
+        const Rodape = $('#rodape').val(); // <-- salva o rodapé
+
+        const produtos = [];
+        $('#productsContainer .product-row').each(function() {
+            const produto = $(this).find('.produto').val();
+            const descricao = $(this).find('.descricao').val();
+            const qtd = $(this).find('.qtd').val();
+            const valorU = $(this).find('.valorU').val();
+            const valorT = $(this).find('.valorT').val();
+            if(produto) { // só adiciona se tiver nome do produto
+                produtos.push({produto, descricao, qtd, valorU, valorT});
+            }
+        });
+
+        // Salva tudo no sessionStorage
+        sessionStorage.setItem('Empresa', Empresa);
+        sessionStorage.setItem('Cliente', Cliente);
+        sessionStorage.setItem('DtEncomenda', DtEncomenda);
+        sessionStorage.setItem('DtEntrega', DtEntrega);
+        sessionStorage.setItem('Produtos', JSON.stringify(produtos));
+        sessionStorage.setItem('rodape', Rodape); // <-- salva no sessionStorage
+
+        // Redireciona para a página de OS
+        window.location.href = 'os_print.html';
+    }
+</script>
+
+</body>
+</html>

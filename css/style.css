@@ -1,0 +1,23 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f1020;
+    overflow-x: hidden;
+}
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #5b42f3, #00d4ff);
+    position: relative;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://cdn.jsdelivr.net/gh/JulianLaval/canvas-particle-network/background.jpg') center/cover;
+    opacity: 0.1;
+}
+#habilidades {
+    background: linear-gradient(135deg, #5b42f3, #00d4ff);
+}
+footer {
+    background: rgba(0, 0, 0, 0.2);
+}

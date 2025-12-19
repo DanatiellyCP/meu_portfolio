@@ -12,8 +12,11 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: url('https://cdn.jsdelivr.net/gh/JulianLaval/canvas-particle-network/background.jpg') center/cover;
+    background: url('/bg1.jpg') center/cover;
     opacity: 0.1;
+    
+
+    
 }
 #habilidades {
     background: linear-gradient(135deg, #5b42f3, #00d4ff);

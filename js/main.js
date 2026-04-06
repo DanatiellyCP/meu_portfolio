@@ -63,9 +63,9 @@ const projetosOnline = [
         url: "projetos/os804/index804.html"
     },
     {
-        name: "Projeto 2",
-        description: "Descrição do Projeto 2",
-        url: "https://link-do-projeto2.com"
+        name: "Placebo Game",
+        description: "Projeto de protótipo de jogo, como parte de um produto transmidia, criado no curso de cinema em 2015; Desenvolvido com Construct2, para plataformas Web e Android.  ",
+        url: "https://www.kongregate.com/en/games/danatielly/placebo1?permalink=placebo1&set_locale=true&uploaded_by=danatielly"
     },
     {
         name: "Projeto 3",

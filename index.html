@@ -3,79 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danatielly Costa | Desenvolvedora Backend & IA</title>
+
+    <title>Blue Hause | Sistemas Inteligentes</title>
+
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header class="hero d-flex align-items-center justify-content-center text-center">
-        <div class="container text-white">
-            <h1 class="display-4 fw-bold">Danatielly Costa</h1>
-            <p class="lead">Desenvolvedora Backend & Pesquisadora em Inteligência Artificial</p>
-        </div>
-    </header>
 
-    <section id="sobre" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4 fw-bold">Sobre Mim</h2>
-            <p class="mx-auto" style="max-width: 800px;">
-                Sou desenvolvedora backend com foco em Python e Inteligência Artificial. Tenho experiência em desenvolvimento de sistemas web 
-                e sistemas Desktop, automação e integração de APIs. Busco unir tecnologia e inovação para criar soluções eficientes e inteligentes.
-            </p>
-        </div>
-    </section>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+    <div class="container">
 
-    <section id="habilidades" class="py-5 text-center">
-        <div class="container">
-            <h2 class="mb-4 fw-bold text-white">Habilidades</h2>
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <span class="badge bg-light text-dark p-3">Python</span>
-                <span class="badge bg-light text-dark p-3">Django</span>
-                <span class="badge bg-light text-dark p-3">Dart</span>
-                <span class="badge bg-light text-dark p-3">Fluter</span>
-                <span class="badge bg-light text-dark p-3">C ++</span>
-                <span class="badge bg-light text-dark p-3">Delphi</span>
-                <span class="badge bg-light text-dark p-3">PHP</span>
-                <span class="badge bg-light text-dark p-3">Machine Learning</span>
-                <span class="badge bg-light text-dark p-3">APIs REST</span>
+        <a class="navbar-brand fw-bold" href="index.html">
+            Blue Hause
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#produtos">Soluções</a>
+                </li>
+
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="#projetos">Projetos</a>
+                </li>-->
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+
+                <li class="nav-item ms-3">
+                    <a class="btn btn-primary btn-sm" href="#contato">
+                        Começar
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+ <header class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- TEXTO -->
+            <div class="col-md-6 text-center text-md-start">
+
+                <h1 class="fw-bold display-5 fade-in">
+                    Gestão inteligente para empresas que querem crescer
+                </h1>
+
+                <p class="lead mt-3 fade-in delay-1">
+                    Automatize processos, organize sua operação e tenha controle total do seu negócio.
+                </p>
+
+                <div class="mt-4 fade-in delay-2">
+                    <a href="contato.html" class="btn btn-primary btn-lg me-2">
+                        Começar agora
+                    </a>
+
+                    <a href="#produtos" class="btn btn-outline-light btn-lg">
+                        Ver soluções
+                    </a>
+                </div>
+
             </div>
-        </div>
-    </section>
 
-    <section id="projetos-online" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4 fw-bold">Projetos Online</h2>
-        <div id="online-projects" class="row justify-content-center"></div>
-        </div>
-    </section>
-
-    <section id="projetos" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4 fw-bold">Projetos</h2>
-            <div id="repos" class="row justify-content-center"></div>
-        </div>
-    </section>
-
- 
-
-
-    <section id="contato" class="py-5 text-center text-white">
-        <div class="container">
-            <h2 class="mb-4 fw-bold">Contato</h2>
-            <p>Você pode entrar em contato comigo pelas redes abaixo:</p>
-            <div>
-                <a href="mailto:danatiellycp@gmail.com" class="btn btn-outline-light m-2">Email</a>
-                <a href="https://github.com/DanatiellyCP" target="_blank" class="btn btn-outline-light m-2">GitHub</a>
-                <a href="https://www.linkedin.com/in/danatielly-pereira-010316359/" target="_blank" class="btn btn-outline-light m-2">LinkedIn</a>
+            <!-- IMAGEM -->
+            <div class="col-md-6 text-center mt-4 mt-md-0 fade-in delay-3">
+                <img src="img/dashboard.png" alt="Dashboard Blue Hause" class="img-fluid hero-img">
             </div>
+
         </div>
-    </section>
+    </div>
+</header>
 
-    <footer class="text-center text-white py-3">
-        <small>© 2025 Danatielly Costa — Todos os direitos reservados.</small>
-    </footer>
+<!--
+<header class="hero text-center d-flex align-items-center">
+    <div class="container">
+        <h1 class="fw-bold display-4 fade-in">
+            Simplifique sua gestão
+        </h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+        <p class="lead mt-3 fade-in delay-1">
+            Sistemas inteligentes para organizar, automatizar e escalar sua empresa.
+        </p>
+
+        <a href="#contato" class="btn btn-primary btn-lg mt-3 fade-in delay-2">
+            Começar agora
+        </a>
+    </div>
+</header> -->
+
+<!-- BENEFÍCIOS -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-5">Por que escolher a Blue Hause?</h2>
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4 fade-in">
+                <i data-lucide="zap" class="icon"></i>
+                <h5 class="mt-3 fw-bold">Automação</h5>
+                <p>Menos tarefas manuais, mais produtividade.</p>
+            </div>
+
+            <div class="col-md-4 mb-4 fade-in delay-1">
+                <i data-lucide="bar-chart" class="icon"></i>
+                <h5 class="mt-3 fw-bold">Controle</h5>
+                <p>Visual completo do seu negócio em tempo real.</p>
+            </div>
+
+            <div class="col-md-4 mb-4 fade-in delay-2">
+                <i data-lucide="shield-check" class="icon"></i>
+                <h5 class="mt-3 fw-bold">Segurança</h5>
+                <p>Seus dados protegidos com confiabilidade.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Tecnologia sem complicação</h2>
+
+        <p class="mx-auto" style="max-width: 700px;">
+            Criamos sistemas rápidos, intuitivos e eficientes para empresas que querem crescer com organização e controle.
+        </p>
+
+        <p class="fw-semibold mt-3">
+            Menos esforço. Mais resultado.
+        </p>
+    </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-5">Nossas soluções</h2>
+
+        <div class="row">
+
+            <div class="col-md-3 mb-4 fade-in">
+                <div class="card border-0 shadow-sm p-3">
+                    <h5>BH Projetos</h5>
+                    <p class="small">Gestão de tarefas e equipes.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 fade-in delay-1">
+                <div class="card border-0 shadow-sm p-3">
+                    <h5>BH Produção</h5>
+                    <p class="small">Controle de produção eficiente.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 fade-in delay-2">
+                <div class="card border-0 shadow-sm p-3">
+                    <h5>BH Agenda</h5>
+                    <p class="small">Organização de compromissos.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 fade-in delay-3">
+                <div class="card border-0 shadow-sm p-3">
+                    <h5>BH Financeiro</h5>
+                    <p class="small">Gestão financeira simples.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4 fade-in delay-3"></div>
+                <div class="card border-0 shadow-sm p-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="projetos/os804/index804.html"> 
+                            <h5>OS 804 -  Teste agora Grátis</h5>
+                            <p> Sistema de emissão de comprovantes de ordem de serviços. </p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROJETOS -->
+ <!--
+<section id="projetos" class="py-5 bg-light text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-5">Projetos</h2>
+
+        <div class="row" id="online-projects"></div>
+    </div>
+</section>-->
+
+<!-- GITHUB --><!--
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-5">Repositórios</h2>
+
+        <div class="row" id="repos"></div>
+    </div>
+</section>-->
+
+<!-- CTA -->
+<section class="py-5 text-center bg-primary text-white">
+    <div class="container">
+        <h2 class="fw-bold mb-3">Pronto para evoluir sua empresa?</h2>
+
+        <a href="contato.html" class="btn btn-light btn-lg">
+            Falar com a gente
+        </a>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Contato</h2>
+
+        <p class="mb-4">
+            Fale com a gente de forma rápida e direta.
+        </p>
+
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+            <!-- EMAIL -->
+            <a href="mailto:bluehasecontato@gmail.com" class="btn btn-outline-dark">
+                E-mail
+            </a>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/5511949485262" target="_blank" class="btn btn-success">
+                Whats App
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-3">
+    <small>© 2026 Blue Hause</small>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
 </html>
